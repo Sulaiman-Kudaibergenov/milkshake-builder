@@ -1,12 +1,14 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Layout from "./components/Layout/Layout";
+import SushiBuilder from "./containers/SushiBuilder/SushiBuilder";
 
-function App() {
+export default () => {
   return (
     <div className="App">
-      Milkshake Builder by Sulaiman Kudaibergenov
+      <Layout>
+        <SushiBuilder />
+      </Layout>
     </div>
   );
-}
-
-export default App;
+};
