@@ -1,0 +1,26 @@
+.MilkControl {
+  display: flex;
+  align-items: center;
+}
+.MilkControl .label {
+  color: white;
+  font-family: "Nanum Brush Script", cursive;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+.MilkControl button {
+  width: 20px;
+  height: 20px;
+  border: none;
+  background-color: white;
+  color: #ec6f31;
+  font-weight: bold;
+  border-radius: 100%;
+  cursor: pointer;
+}
+.MilkControl button:disabled {
+  opacity: 0.5;
+}
+.MilkControl button:not(:disabled):hover {
+  opacity: 0.8;
+}

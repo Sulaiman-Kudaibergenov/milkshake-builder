@@ -1,23 +1,23 @@
 import React from "react";
-import classes from "./Sushi.module.css";
+import classes from "./Milk.module.css";
 
 export default ({ type }) => {
-  const sushiClasses = [classes.Sushi];
+  const milkClasses = [classes.Milk];
 
   switch (type) {
-    case "salmonRoll":
-      sushiClasses.push(classes.salmonRoll);
+    case "milk":
+      milkClasses.push(classes.milk);
       break;
 
-    case "tunaRoll":
-      sushiClasses.push(classes.tunaRoll);
+    case "chocolate":
+      milkClasses.push(classes.chocolate);
       break;
 
-    case "maki":
+    case "banana":
     default:
-      sushiClasses.push(classes.maki);
+      milkClasses.push(classes.banana);
       break;
   }
 
-  return <div className={sushiClasses.join(" ")}></div>;
+  return <div className={milkClasses.join(" ")}></div>;
 };

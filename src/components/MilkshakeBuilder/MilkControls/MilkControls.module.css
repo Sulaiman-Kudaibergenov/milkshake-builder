@@ -1,0 +1,11 @@
+.MilkControls {
+  border: 3px solid #d35a25;
+  background-color: #ec6f31;
+  width: 300px;
+  padding-top: 0.5rem;
+  padding-left: 0.5rem;
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
