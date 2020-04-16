@@ -2,9 +2,10 @@
   padding: 1rem;
   padding-top: 2rem;
 
-  background-color: lightgray;
-  width: 392px;
-  height: 300px;
+  background-color: rgb(155, 238, 193);
+  width: 430px;
+  height: 350px;
+  border-radius: 5%;
 
   display: flex;
   flex-flow: row wrap;
@@ -15,4 +16,5 @@
 .MilkshakeKit .price {
   font-size: 2rem;
   font-weight: bold;
+  font-family: "Kaushan Script", cursive;
 }

@@ -1,0 +1,14 @@
+.Logo {
+  display: flex;
+  align-items: center;
+}
+.Logo img {
+  margin: 5px;
+  height: 55px;
+  width: 50px;
+}
+.Logo span {
+  font-family: "Kaushan Script", cursive;
+  color: white;
+  font-size: 2rem;
+}
