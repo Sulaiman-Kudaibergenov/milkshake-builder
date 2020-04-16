@@ -7,6 +7,7 @@ const PRICES = {
   chocolate: 10,
   banana: 8,
 };
+Это я Сулайман
 
 export default () => {
   const [ingredients, setIngredients] = useState({
