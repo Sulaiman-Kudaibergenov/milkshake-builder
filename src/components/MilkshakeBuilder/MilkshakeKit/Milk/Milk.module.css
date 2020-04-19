@@ -1,23 +1,22 @@
-.Sushi {
+.Milk {
   width: 50px;
-  height: 50px;
+  height: 80px;
   box-sizing: border-box;
+  background-repeat: no-repeat;
+}
+.milk {
+  background-image: url(../../../../assets/milk.svg);
+}
+.chocolate {
+  background-image: url(../../../../assets/chocolate.svg);
+}
+.banana {
+  background-image: url(../../../../assets/banana.svg);
+}
 
-  margin-right: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-.salmonRoll {
-  border-radius: 100%;
-  border: 15px solid rgb(230, 159, 29);
-  background-color: white;
-}
-.tunaRoll {
-  border-radius: 20%;
-  border: 15px solid tomato;
-  background-color: white;
-}
-.maki {
-  border-radius: 100%;
-  border: 1px solid rgb(12, 50, 12);
-  background-color: white;
+@media (min-width: 900px) {
+  .Milk {
+    width: 50px;
+    height: 62px;
+  }
 }
