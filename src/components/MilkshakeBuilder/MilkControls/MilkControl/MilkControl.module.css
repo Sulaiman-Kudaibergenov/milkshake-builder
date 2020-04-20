@@ -24,3 +24,9 @@
 .MilkControl button:not(:disabled):hover {
   opacity: 0.8;
 }
+
+@media (min-width: 500px) {
+  .MilkControl .label {
+    font-size: 2rem;
+  }
+}

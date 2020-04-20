@@ -3,20 +3,25 @@
   height: 80px;
   box-sizing: border-box;
   background-repeat: no-repeat;
+  background-size: auto;
 }
 .milk {
   background-image: url(../../../../assets/milk.svg);
+  background-size: 80px;
 }
 .chocolate {
   background-image: url(../../../../assets/chocolate.svg);
+  background-size: 80px;
 }
 .banana {
   background-image: url(../../../../assets/banana.svg);
+  background-size: 80px;
 }
 
 @media (min-width: 900px) {
   .Milk {
     width: 50px;
     height: 62px;
+    background-size: 80px;
   }
 }
