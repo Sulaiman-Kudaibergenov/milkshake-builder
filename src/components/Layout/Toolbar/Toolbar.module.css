@@ -5,3 +5,12 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.Toolbar nav {
+  display: none;
+}
+@media (min-width: 500px) {
+  .Toolbar nav {
+    display: block;
+  }
+}

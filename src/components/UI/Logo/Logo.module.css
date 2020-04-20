@@ -1,6 +1,7 @@
 .Logo {
   display: flex;
   align-items: center;
+  text-align: center;
 }
 .Logo img {
   margin: 5px;
@@ -9,6 +10,6 @@
 }
 .Logo span {
   font-family: "Kaushan Script", cursive;
-  color: white;
-  font-size: 2rem;
+  color: rgb(229, 188, 195);
+  font-size: 2.3rem;
 }
