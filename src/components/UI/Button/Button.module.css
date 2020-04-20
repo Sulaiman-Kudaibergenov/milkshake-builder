@@ -1,0 +1,26 @@
+.Button {
+  border: none;
+  background-color: #f6ff9f;
+  color: rgb(229, 188, 195);
+  font-weight: bold;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: "Kaushan Script", cursive;
+  padding: 5px 10px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+.Button:disabled {
+  opacity: 0.5;
+}
+.Button:not(:disabled):hover {
+  opacity: 0.8;
+}
+.green {
+  background-color: rgb(59, 148, 59);
+  color: white;
+}
+.red {
+  background-color: rgb(223, 64, 64);
+  color: white;
+}
