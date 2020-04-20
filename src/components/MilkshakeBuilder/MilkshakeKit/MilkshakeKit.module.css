@@ -14,7 +14,19 @@
   overflow: hidden;
 }
 .MilkshakeKit .price {
-  font-size: 2rem;
+  font-size: 3rem;
+  text-align: center;
   font-weight: bold;
   font-family: "Kaushan Script", cursive;
+}
+
+.MilkshakeKit {
+  padding: 0 0.5rem;
+  width: 100%;
+}
+
+@media (min-width: 500px) {
+  .MilkshakeKit {
+    width: 495px;
+  }
 }
