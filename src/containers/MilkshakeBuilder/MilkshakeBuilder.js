@@ -9,6 +9,10 @@ const PRICES = {
   milk: 7,
   chocolate: 10,
   banana: 8,
+  cherry: 5,
+  strawberry: 6,
+  orange: 14,
+  berry: 15,
 };
 
 export default () => {
@@ -16,6 +20,10 @@ export default () => {
     milk: 0,
     chocolate: 0,
     banana: 0,
+    cherry: 0,
+    strawberry: 0,
+    orange: 0,
+    berry: 0,
   });
   const [price, setPrice] = useState(100);
   const [canOrder, setCanOrder] = useState(false);

@@ -6,6 +6,10 @@ const LABELS = {
   milk: "Milk",
   chocolate: "Chocolate",
   banana: "Banana",
+  cherry: "Cherry",
+  strawberry: "Strawberry",
+  orange: "Orange-juice",
+  berry: "Berry-syrup",
 };
 
 export default ({ ingredients, cancelOrder, finishOrder, price }) => {

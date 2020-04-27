@@ -7,6 +7,10 @@ const CONTROLS = [
   { label: "Milk", type: "milk" },
   { label: "Chocolate", type: "chocolate" },
   { label: "Banana", type: "banana" },
+  { label: "Cherry", type: "cherry" },
+  { label: "Strawberry", type: "strawberry" },
+  { label: "Orange-juice", type: "orange" },
+  { label: "Berry-syrup", type: "berry" },
 ];
 export default ({
   canOrder,
