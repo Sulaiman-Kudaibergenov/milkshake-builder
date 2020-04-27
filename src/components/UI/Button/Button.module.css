@@ -7,8 +7,9 @@
   cursor: pointer;
   font-family: "Kaushan Script", cursive;
   padding: 5px 10px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   text-transform: uppercase;
+  margin: 1rem;
 }
 .Button:disabled {
   opacity: 0.5;
