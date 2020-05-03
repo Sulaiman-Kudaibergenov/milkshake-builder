@@ -1,9 +1,0 @@
-.MilkControls {
-  border: 3px solid rgb(163, 130, 136);
-  background-color: #f6cad6;
-  width: 300px;
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  padding: 0.2rem;
-}
