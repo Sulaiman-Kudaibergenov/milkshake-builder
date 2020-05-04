@@ -1,0 +1,32 @@
+.MilkshakeControl {
+  display: flex;
+  align-items: center;
+}
+.MilkshakeControl .label {
+  color: #f6ff9f;
+  font-family: "Kaushan Script", cursive;
+  font-size: 1.2rem;
+  padding: 0.4rem;
+}
+.MilkshakeControl button {
+  width: 25px;
+  height: 25px;
+  border: none;
+  background-color: #f6ff9f;
+  color: rgb(229, 188, 195);
+  font-weight: bold;
+  border-radius: 100%;
+  cursor: pointer;
+}
+.MilkshakeControl button:disabled {
+  opacity: 0.5;
+}
+.MilkshakeControl button:not(:disabled):hover {
+  opacity: 0.8;
+}
+
+@media (min-width: 500px) {
+  .MilkshakeControl .label {
+    font-size: 1.8rem;
+  }
+}

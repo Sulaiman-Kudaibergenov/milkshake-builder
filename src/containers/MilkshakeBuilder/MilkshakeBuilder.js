@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import MilkshakeKit from "../../components/MilkshakeBuilder/MilkshakeKit/MilkshakeKit";
+import Milkshake from "../../components/MilkshakeBuilder/Milkshake/Milkshake";
 import classes from "./MilkshakeBuilder.module.css";
-import MilkControls from "../../components/MilkshakeBuilder/MilkControls/MilkControls";
+import MilkshakeControls from "../../components/MilkshakeBuilder/MilkshakeControls/MilkshakeControls";
 import Modal from "../../components/UI/Modal/Modal";
 import OrderSummary from "../../components/MilkshakeBuilder/OrderSummary/OrderSummary";
 
 const PRICES = {
-  milk: 7,
   chocolate: 10,
   banana: 8,
   cherry: 5,
@@ -17,7 +16,6 @@ const PRICES = {
 
 export default () => {
   const [ingredients, setIngredients] = useState({
-    milk: 0,
     chocolate: 0,
     banana: 0,
     cherry: 0,
@@ -69,8 +67,8 @@ export default () => {
 
   return (
     <div className={classes.MilkshakeBuilder}>
-      <MilkshakeKit price={price} ingredients={ingredients} />
-      <MilkControls
+      <Milkshake price={price} ingredients={ingredients} />
+      <MilkshakeControls
         startOrder={startOrder}
         canOrder={canOrder}
         ingredients={ingredients}
@@ -78,12 +76,7 @@ export default () => {
         removeIngredient={removeIngredient}
       />
       <Modal show={isOrdering} hideCallback={cancelOrder}>
-        <OrderSummary
-          ingredients={ingredients}
-          finishOrder={finishOrder}
-          cancelOrder={cancelOrder}
-          price={price}
-        />
+        {orderSummary}
       </Modal>
     </div>
   );

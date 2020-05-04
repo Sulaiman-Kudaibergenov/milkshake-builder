@@ -1,0 +1,32 @@
+.Milkshake .plate {
+  padding: 1rem;
+  padding-top: 2rem;
+
+  background-color: rgb(155, 238, 193);
+  width: 300px;
+  height: 370px;
+  border-radius: 0% 0% 15% 15%;
+
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+
+  overflow: hidden;
+}
+.Milkshake .price {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: bold;
+  font-family: "Kaushan Script", cursive;
+}
+
+.Milkshake {
+  padding: 0 0.5rem;
+  width: 100%;
+}
+
+@media (min-width: 500px) {
+  .Milkshake {
+    width: 495px;
+  }
+}
