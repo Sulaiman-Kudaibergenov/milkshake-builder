@@ -4,14 +4,15 @@ import classes from "./MilkshakeBuilder.module.css";
 import MilkshakeControls from "../../components/MilkshakeBuilder/MilkshakeControls/MilkshakeControls";
 import Modal from "../../components/UI/Modal/Modal";
 import OrderSummary from "../../components/MilkshakeBuilder/OrderSummary/OrderSummary";
+import axios from "../../axios";
 
 const PRICES = {
-  chocolate: 10,
-  banana: 8,
-  cherry: 5,
-  strawberry: 6,
-  orange: 14,
-  berry: 15,
+  chocolate: 10.5,
+  banana: 8.7,
+  cherry: 5.9,
+  strawberry: 6.0,
+  orange: 14.5,
+  berry: 15.6,
 };
 
 export default () => {
@@ -76,7 +77,12 @@ export default () => {
         removeIngredient={removeIngredient}
       />
       <Modal show={isOrdering} hideCallback={cancelOrder}>
-        {orderSummary}
+        <OrderSummary
+          ingredients={ingredients}
+          finishOrder={finishOrder}
+          cancelOrder={cancelOrder}
+          price={price}
+        />
       </Modal>
     </div>
   );
