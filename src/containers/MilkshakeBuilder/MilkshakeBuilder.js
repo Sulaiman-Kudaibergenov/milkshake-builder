@@ -5,6 +5,7 @@ import MilkshakeControls from "../../components/MilkshakeBuilder/MilkshakeContro
 import Modal from "../../components/UI/Modal/Modal";
 import OrderSummary from "../../components/MilkshakeBuilder/OrderSummary/OrderSummary";
 import axios from "../../axios";
+import Spinner from "../../components/UI/Spinner/Spinner";
 
 const PRICES = {
   chocolate: 10.5,
