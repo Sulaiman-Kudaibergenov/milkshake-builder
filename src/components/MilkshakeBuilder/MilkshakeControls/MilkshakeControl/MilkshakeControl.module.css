@@ -3,7 +3,7 @@
   align-items: center;
 }
 .MilkshakeControl .label {
-  color: #f6ff9f;
+  color: #f4ff93;
   font-family: "Kaushan Script", cursive;
   font-size: 1.2rem;
   padding: 0.4rem;
@@ -12,7 +12,7 @@
   width: 25px;
   height: 25px;
   border: none;
-  background-color: #f6ff9f;
+  background-color: #f4ff93;
   color: rgb(229, 188, 195);
   font-weight: bold;
   border-radius: 100%;
