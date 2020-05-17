@@ -2,10 +2,11 @@
   padding: 1rem;
   padding-top: 2rem;
 
-  background-color: rgb(155, 238, 193);
-  width: 300px;
+  background-image: url(../../../assets/hotpng.com.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 370px;
   height: 370px;
-  border-radius: 0% 0% 15% 15%;
 
   display: flex;
   flex-flow: row wrap;

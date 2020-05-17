@@ -1,9 +1,8 @@
 .Toolbar {
   background-color: #f4ff93;
-  height: 60px;
+
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .Toolbar nav {
