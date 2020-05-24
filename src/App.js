@@ -1,4 +1,5 @@
 import React from "react";
+import { Route, Switch, Redirect } from "react-router-dom";
 import "./App.css";
 import Layout from "./containers/Layout/Layout";
 import MilkshakeBuilder from "./containers/MilkshakeBuilder/MilkshakeBuilder";
@@ -8,8 +9,17 @@ export default () => {
   return (
     <div className="App">
       <Layout>
-        <MilkshakeBuilder />
-        <Checkout />
+        <Switch>
+          <Route path="/" exact>
+            <Redirect to="/builder" />
+          </Route>
+          <Route path="/builder">
+            <MilkshakeBuilder />
+          </Route>
+          <Route path="/checkout">
+            <Checkout />
+          </Route>
+        </Switch>
       </Layout>
     </div>
   );
