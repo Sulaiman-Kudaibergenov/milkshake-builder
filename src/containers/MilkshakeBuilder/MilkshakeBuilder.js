@@ -114,6 +114,7 @@ export default withErrorHandler(() => {
 
   return (
     <div className={classes.MilkshakeBuilder}>
+      <h1>Milkshake builder</h1>
       {output}
       <Modal show={isOrdering} hideCallback={cancelOrder}>
         {orderSummary}

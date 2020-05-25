@@ -4,6 +4,7 @@ import "./App.css";
 import Layout from "./containers/Layout/Layout";
 import MilkshakeBuilder from "./containers/MilkshakeBuilder/MilkshakeBuilder";
 import Checkout from "./containers/Checkout/Checkout";
+import Orders from "./containers/Orders/Orders";
 
 export default () => {
   return (
@@ -18,6 +19,9 @@ export default () => {
           </Route>
           <Route path="/checkout">
             <Checkout />
+          </Route>
+          <Route path="/orders">
+            <Orders />
           </Route>
         </Switch>
       </Layout>
