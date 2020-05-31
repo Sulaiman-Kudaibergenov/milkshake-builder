@@ -10,18 +10,8 @@ import Spinner from "../../components/UI/Spinner/Spinner";
 import withErrorHandler from "../../hoc/withErrorHandler/withErrorHandler";
 import { useSelector } from "react-redux";
 
-const PRICES = {
-  chocolate: 10.5,
-  banana: 8.7,
-  cherry: 5.9,
-  strawberry: 6.0,
-  orange: 14.5,
-  berry: 15.6,
-};
-
 export default withErrorHandler(() => {
-  const { ingredients } = useSelector((state) => state);
-  const [price, setPrice] = useState(100);
+  const { ingredients, price } = useSelector((state) => state);
   const [canOrder, setCanOrder] = useState(false);
   const [isOrdering, setIsOrdering] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -62,8 +52,8 @@ export default withErrorHandler(() => {
     // setIngredients(newIngredients);
     checkCanOrder(newIngredients);
 
-    const newPrice = price + PRICES[type];
-    setPrice(newPrice);
+    //const newPrice = price + PRICES[type];
+    //setPrice(newPrice);
   }
 
   function removeIngredient(type) {
@@ -73,8 +63,8 @@ export default withErrorHandler(() => {
       // setIngredients(newIngredients);
       checkCanOrder(newIngredients);
 
-      const newPrice = price - PRICES[type];
-      setPrice(newPrice);
+      // const newPrice = price - PRICES[type];
+      //setPrice(newPrice);
     }
   }
   /*
@@ -84,7 +74,7 @@ export default withErrorHandler(() => {
       .then((response) => setIngredients(response.data))
       .catch((error) => {});
   }, []);
- */
+*/
   let output = <Spinner />;
   if (ingredients) {
     output = (

@@ -11,6 +11,14 @@ const initialState = {
   },
   price: 100,
 };
+const PRICES = {
+  chocolate: 10.5,
+  banana: 8.7,
+  cherry: 5.9,
+  strawberry: 6.0,
+  orange: 14.5,
+  berry: 15.6,
+};
 
 export default (state = initialState, action) => {
   switch (action.type) {
@@ -21,6 +29,7 @@ export default (state = initialState, action) => {
           ...state.ingredients,
           [action.ingredient]: state.ingredients[action.ingredient] + 1,
         },
+        price: state.price + PRICES[action.ingredient],
       };
 
     case actions.REMOVE_INGREDIENT:
@@ -30,6 +39,7 @@ export default (state = initialState, action) => {
           ...state.ingredients,
           [action.ingredient]: state.ingredients[action.ingredient] - 1,
         },
+        price: state.price - PRICES[action.ingredient],
       };
 
     default:
