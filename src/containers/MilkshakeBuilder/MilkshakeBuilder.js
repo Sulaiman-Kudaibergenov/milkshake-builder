@@ -8,6 +8,7 @@ import Modal from "../../components/UI/Modal/Modal";
 import OrderSummary from "../../components/MilkshakeBuilder/OrderSummary/OrderSummary";
 import Spinner from "../../components/UI/Spinner/Spinner";
 import withErrorHandler from "../../hoc/withErrorHandler/withErrorHandler";
+import { useSelector } from "react-redux";
 
 const PRICES = {
   chocolate: 10.5,
@@ -19,7 +20,7 @@ const PRICES = {
 };
 
 export default withErrorHandler(() => {
-  const [ingredients, setIngredients] = useState(null);
+  const { ingredients } = useSelector((state) => state);
   const [price, setPrice] = useState(100);
   const [canOrder, setCanOrder] = useState(false);
   const [isOrdering, setIsOrdering] = useState(false);
@@ -58,7 +59,7 @@ export default withErrorHandler(() => {
   function addIngredient(type) {
     const newIngredients = { ...ingredients };
     newIngredients[type]++;
-    setIngredients(newIngredients);
+    // setIngredients(newIngredients);
     checkCanOrder(newIngredients);
 
     const newPrice = price + PRICES[type];
@@ -69,21 +70,21 @@ export default withErrorHandler(() => {
     if (ingredients[type] >= 1) {
       const newIngredients = { ...ingredients };
       newIngredients[type]--;
-      setIngredients(newIngredients);
+      // setIngredients(newIngredients);
       checkCanOrder(newIngredients);
 
       const newPrice = price - PRICES[type];
       setPrice(newPrice);
     }
   }
-
+  /*
   useEffect(() => {
     axios
       .get("/ingredients.json")
       .then((response) => setIngredients(response.data))
       .catch((error) => {});
   }, []);
-
+ */
   let output = <Spinner />;
   if (ingredients) {
     output = (
