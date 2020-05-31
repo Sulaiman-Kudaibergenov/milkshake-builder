@@ -11,19 +11,11 @@ const CONTROLS = [
   { label: "Orange-juice", type: "orange" },
   { label: "Berry-syrup", type: "berry" },
 ];
-export default ({
-  canOrder,
-  ingredients,
-  addIngredient,
-  removeIngredient,
-  startOrder,
-}) => {
+export default ({ canOrder, ingredients, startOrder }) => {
   const controlsOutput = CONTROLS.map((control) => (
     <MilkshakeControl
       key={control.type}
       control={control}
-      addIngredient={addIngredient}
-      removeIngredient={removeIngredient}
       disabled={ingredients[control.type] === 0}
     />
   ));
