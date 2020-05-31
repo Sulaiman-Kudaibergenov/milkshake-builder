@@ -4,7 +4,7 @@ import classes from "./Nav.module.css";
 
 export default () => (
   <ul className={classes.Nav}>
-    <NavItem url="/builder">Sushi Builder</NavItem>
+    <NavItem url="/builder">Milkshake Builder</NavItem>
     <NavItem url="/orders">Orders</NavItem>
   </ul>
 );
