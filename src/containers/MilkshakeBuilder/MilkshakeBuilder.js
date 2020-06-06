@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
 import axios from "../../axios";
+import { load } from "../../store/actions/builder";
 import Milkshake from "../../components/MilkshakeBuilder/Milkshake/Milkshake";
 import classes from "./MilkshakeBuilder.module.css";
 import MilkshakeControls from "../../components/MilkshakeBuilder/MilkshakeControls/MilkshakeControls";
@@ -8,8 +10,6 @@ import Modal from "../../components/UI/Modal/Modal";
 import OrderSummary from "../../components/MilkshakeBuilder/OrderSummary/OrderSummary";
 import Spinner from "../../components/UI/Spinner/Spinner";
 import withErrorHandler from "../../hoc/withErrorHandler/withErrorHandler";
-import { useSelector, useDispatch } from "react-redux";
-import { load } from "../../store/actions/builder";
 
 export default withErrorHandler(() => {
   const { ingredients, price } = useSelector((state) => state);
