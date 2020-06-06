@@ -3,20 +3,13 @@ import classes from "./MilkshakeControls.module.css";
 import MilkshakeControl from "./MilkshakeControl/MilkshakeControl";
 import Button from "../../UI/Button/Button";
 
-const CONTROLS = [
-  { label: "Chocolate", type: "chocolate" },
-  { label: "Banana", type: "banana" },
-  { label: "Cherry", type: "cherry" },
-  { label: "Strawberry", type: "strawberry" },
-  { label: "Orange-juice", type: "orange" },
-  { label: "Berry-syrup", type: "berry" },
-];
 export default ({ canOrder, ingredients, startOrder }) => {
-  const controlsOutput = CONTROLS.map((control) => (
+  const controlsOutput = Object.keys(ingredients).map((ingredient) => (
     <MilkshakeControl
-      key={control.type}
-      control={control}
-      disabled={ingredients[control.type] === 0}
+      key={ingredient}
+      ingredient={ingredient}
+      label={ingredients[ingredient].label}
+      disabled={ingredients[ingredient].quantity === 0}
     />
   ));
 

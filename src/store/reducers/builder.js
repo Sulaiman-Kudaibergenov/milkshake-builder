@@ -2,12 +2,12 @@ import * as types from "../actions/types";
 
 const initialState = {
   ingredients: {
-    chocolate: 1,
-    banana: 1,
-    cherry: 1,
-    strawberry: 1,
-    orange: 1,
-    berry: 1,
+    chocolate: { quantity: 1, price: 10.5, label: "Chocolate" },
+    banana: { quantity: 1, price: 8.7, label: "Banana" },
+    cherry: { quantity: 1, price: 5.9, label: "Cherry" },
+    strawberry: { quantity: 1, price: 6.0, label: "Strawberry" },
+    orange: { quantity: 1, price: 14.5, label: "Orange" },
+    berry: { quantity: 1, price: 15.6, label: "Berry" },
   },
   price: 100,
 };
@@ -27,9 +27,12 @@ export default (state = initialState, action) => {
         ...state,
         ingredients: {
           ...state.ingredients,
-          [action.ingredient]: state.ingredients[action.ingredient] + 1,
+          [action.ingredient]: {
+            ...state.ingredients[action.ingredient],
+            quantity: state.ingredients[action.ingredient].quantity + 1,
+          },
         },
-        price: state.price + PRICES[action.ingredient],
+        price: state.price + state.ingredients[action.ingredient].price,
       };
 
     case types.REMOVE_INGREDIENT:
@@ -37,9 +40,12 @@ export default (state = initialState, action) => {
         ...state,
         ingredients: {
           ...state.ingredients,
-          [action.ingredient]: state.ingredients[action.ingredient] - 1,
+          [action.ingredient]: {
+            ...state.ingredients[action.ingredient],
+            quantity: state.ingredients[action.ingredient].quantity - 1,
+          },
         },
-        price: state.price - PRICES[action.ingredient],
+        price: state.price - state.ingredients[action.ingredient].price,
       };
 
     default:
