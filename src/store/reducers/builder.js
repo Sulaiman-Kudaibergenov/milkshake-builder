@@ -1,14 +1,7 @@
 import * as types from "../actions/types";
 
 const initialState = {
-  ingredients: {
-    chocolate: { quantity: 1, price: 10.5, label: "Chocolate" },
-    banana: { quantity: 1, price: 8.7, label: "Banana" },
-    cherry: { quantity: 1, price: 5.9, label: "Cherry" },
-    strawberry: { quantity: 1, price: 6.0, label: "Strawberry" },
-    orange: { quantity: 1, price: 14.5, label: "Orange" },
-    berry: { quantity: 1, price: 15.6, label: "Berry" },
-  },
+  ingredients: null,
   price: 100,
 };
 const PRICES = {
@@ -46,6 +39,11 @@ export default (state = initialState, action) => {
           },
         },
         price: state.price - state.ingredients[action.ingredient].price,
+      };
+    case types.SET_INGREDIENTS:
+      return {
+        ...state,
+        ingredients: action.ingredients,
       };
 
     default:
