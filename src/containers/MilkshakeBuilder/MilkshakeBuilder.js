@@ -9,9 +9,9 @@ import MilkshakeControls from "../../components/MilkshakeBuilder/MilkshakeContro
 import Modal from "../../components/UI/Modal/Modal";
 import OrderSummary from "../../components/MilkshakeBuilder/OrderSummary/OrderSummary";
 import Spinner from "../../components/UI/Spinner/Spinner";
-import withErrorHandler from "../../hoc/withErrorHandler/withErrorHandler";
+import withAxios from "../../hoc/withAxios/withAxios";
 
-export default withErrorHandler(() => {
+export default withAxios(() => {
   const { ingredients, price } = useSelector((state) => state.builder);
   const [isOrdering, setIsOrdering] = useState(false);
   const [loading, setLoading] = useState(false);
