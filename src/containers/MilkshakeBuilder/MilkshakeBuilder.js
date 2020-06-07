@@ -13,6 +13,7 @@ import withAxios from "../../hoc/withAxios/withAxios";
 
 export default withAxios(() => {
   const { ingredients, price } = useSelector((state) => state.builder);
+  const isAuthenticated = useSelector((state) => state.auth.token !== null);
   const [isOrdering, setIsOrdering] = useState(false);
   const [loading, setLoading] = useState(false);
   const history = useHistory();
@@ -21,6 +22,14 @@ export default withAxios(() => {
   useEffect(() => {
     load(dispatch);
   }, [dispatch]);
+
+  function startOrder() {
+    if (isAuthenticated) {
+      setIsOrdering(true);
+    } else {
+      history.push("/auth?checkout");
+    }
+  }
 
   let output = <Spinner />;
   if (ingredients) {
@@ -35,7 +44,7 @@ export default withAxios(() => {
       <>
         <Milkshake price={price} ingredients={ingredients} />
         <MilkshakeControls
-          startOrder={() => setIsOrdering(true)}
+          startOrder={startOrder}
           canOrder={canOrder}
           ingredients={ingredients}
         />
