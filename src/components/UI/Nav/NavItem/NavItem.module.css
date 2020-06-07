@@ -21,7 +21,7 @@
   background-color: rgba(92, 76, 76, 0.1);
 }
 
-@media (min-width: 670px) {
+@media (min-width: 700px) {
   .NavItem a {
     height: 70px;
     border: none;

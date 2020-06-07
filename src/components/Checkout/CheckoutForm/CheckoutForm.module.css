@@ -9,9 +9,10 @@
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3) inset;
   border-radius: 1em;
   font-size: 1.2rem;
-  min-width: 480px;
+  width: 480px;
   margin-top: 0.5em;
 }
+
 .CheckoutForm input:focus,
 .CheckoutForm select:focus {
   outline: none;
@@ -19,4 +20,11 @@
 }
 .CheckoutForm button {
   margin: 1em 0;
+}
+
+@media (max-width: 480px) {
+  .CheckoutForm input,
+  .CheckoutForm select {
+    width: 220px;
+  }
 }
