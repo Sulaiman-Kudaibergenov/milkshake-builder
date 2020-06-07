@@ -21,7 +21,7 @@ export default withAxios(() => {
   return (
     <div className={classes.Auth}>
       <form onSubmit={formSubmitted}>
-        ><h1>Sign up</h1>
+        <h1>Sign up</h1>
         <input type="email" placeholder="E-mail" name="email" required />
         <input
           type="password"
