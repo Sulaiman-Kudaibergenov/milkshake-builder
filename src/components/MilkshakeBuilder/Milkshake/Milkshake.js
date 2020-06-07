@@ -7,14 +7,26 @@ export default ({ price, ingredients }) => {
 
   Object.keys(ingredients).forEach((ingredient) => {
     for (let i = 0; i < ingredients[ingredient].quantity; i++) {
+      console.log(ingredients.chocolate.quantity);
+
       ingredientsOutput.push(
         <Ingredient key={ingredient + i} type={ingredient} />
       );
     }
   });
+
   return (
     <div className={classes.Milkshake}>
-      <div className={classes.plate}>{ingredientsOutput}</div>
+      <div
+        className={classes.plate}
+        style={{
+          backgroundColor: `rgba(0, 0, 0, ${
+            ingredients.chocolate.quantity * 0.1
+          })`,
+        }}
+      >
+        {ingredientsOutput}
+      </div>
       <div className={classes.price}>{price.toFixed(2)} som</div>
     </div>
   );
