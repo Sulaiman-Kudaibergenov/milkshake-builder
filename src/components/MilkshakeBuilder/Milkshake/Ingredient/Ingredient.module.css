@@ -5,10 +5,7 @@
 
   background-repeat: no-repeat;
 }
-.chocolate {
-  background-image: url(../../../../assets/chocolate.webp);
-  background-size: 100%;
-}
+
 .banana {
   background-image: url(../../../../assets/banana.webp);
   background-size: 100%;

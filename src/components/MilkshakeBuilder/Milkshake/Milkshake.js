@@ -20,7 +20,7 @@ export default ({ price, ingredients }) => {
       <div
         className={classes.plate}
         style={{
-          backgroundColor: `rgba(0, 0, 0, ${
+          backgroundColor: `rgba(78, 27, 27, ${
             ingredients.chocolate.quantity * 0.1
           })`,
         }}
