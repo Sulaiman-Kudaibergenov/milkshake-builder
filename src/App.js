@@ -5,6 +5,7 @@ import Layout from "./containers/Layout/Layout";
 import MilkshakeBuilder from "./containers/MilkshakeBuilder/MilkshakeBuilder";
 import Checkout from "./components/Checkout/Checkout";
 import Orders from "./components/Orders/Orders";
+import Auth from "./components/Auth/Auth";
 
 export default () => {
   return (
@@ -22,6 +23,9 @@ export default () => {
           </Route>
           <Route path="/orders">
             <Orders />
+          </Route>
+          <Route path="/auth">
+            <Auth />
           </Route>
         </Switch>
       </Layout>
