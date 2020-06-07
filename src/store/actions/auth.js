@@ -28,6 +28,10 @@ const sigUpUrl =
 
 export const auth = (dispatch, method, email, password) =>
   axios
-    .post(method === "sigin" ? sigInUrl : sigUpUrl, { email, password })
+    .post(method === "sigin" ? sigInUrl : sigUpUrl, {
+      email,
+      password,
+      returnSecureToken: true,
+    })
     .then(({ data }) => success(dispatch, data))
     .catch((error) => fail(dispatch, error));
