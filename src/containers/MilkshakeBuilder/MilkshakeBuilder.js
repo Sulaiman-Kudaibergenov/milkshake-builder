@@ -15,7 +15,7 @@ export default withAxios(() => {
   const { ingredients, price } = useSelector((state) => state.builder);
   const isAuthenticated = useSelector((state) => state.auth.token !== null);
   const [isOrdering, setIsOrdering] = useState(false);
-  const [loading, setLoading] = useState(false);
+
   const history = useHistory();
   const dispatch = useDispatch();
 

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Modal from "../../components/UI/Modal/Modal";
-import { load } from "../../store/actions/builder";
 
 const withAxios = (WrappedComponent, axios) => {
   return (props) => {
@@ -33,7 +32,7 @@ const withAxios = (WrappedComponent, axios) => {
         axios.interceptors.request.eject(requestInterceptor);
         axios.interceptors.response.eject(responseInterceptor);
       };
-    }, []);
+    }, [requestInterceptor, responseInterceptor]);
 
     return (
       <>
