@@ -7,7 +7,7 @@ export default ({ price, ingredients }) => {
 
   Object.keys(ingredients).forEach((ingredient) => {
     for (let i = 0; i < ingredients[ingredient].quantity; i++) {
-      console.log(ingredients.chocolate.quantity);
+      console.log(ingredients);
 
       ingredientsOutput.push(
         <Ingredient key={ingredient + i} type={ingredient} />
@@ -20,9 +20,12 @@ export default ({ price, ingredients }) => {
       <div
         className={classes.plate}
         style={{
-          backgroundColor: `rgba(78, 27, 27, ${
-            ingredients.chocolate.quantity * 0.1
-          })`,
+          backgroundColor: `rgba(${ingredients.banana.quantity * 7}, ${
+            ingredients.berry.quantity * 7
+          },
+          ${ingredients.orange.quantity * 7},
+          
+          ${ingredients.chocolate.quantity * 0.1})`,
         }}
       >
         {ingredientsOutput}

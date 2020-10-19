@@ -1,6 +1,6 @@
 .Ingredient {
   width: 40px;
-  height: 70px;
+  height: 50px;
   box-sizing: border-box;
 
   background-repeat: no-repeat;
@@ -10,8 +10,8 @@
   height: 0 !important;
 }
 .banana {
-  background-image: url(../../../../assets/banana.webp);
-  background-size: 100%;
+  width: 0 !important;
+  height: 0 !important;
 }
 .cherry {
   background-image: url(../../../../assets/cherry.webp);
@@ -22,12 +22,12 @@
   background-size: 100%;
 }
 .berry {
-  background-image: url(../../../../assets/syrup.svg);
-  background-size: 100%;
+  width: 0 !important;
+  height: 0 !important;
 }
 .orange {
-  background-image: url(../../../../assets/orange-juice.webp);
-  background-size: 100%;
+  width: 0 !important;
+  height: 0 !important;
 }
 
 @media (min-width: 900px) {
